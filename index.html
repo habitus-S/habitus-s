@@ -199,50 +199,33 @@ let elapsedTime = 0;
 
 // 나중에 구글 시트 연동 시 이 부분을 교체할 수 있습니다.
 const sentences = [
-  { en: "I returned to the Cape of Good Hope, South Africa, / where I had spent my childhood, / after over 20 years of movie-making.", 
-    ko: "나는 남아프리카공화국의 희망봉으로 돌아갔는데 / 그곳은 어린 시절을 보냈던 곳이다 / 20여 년의 영화 제작 생활을 마치고." },
+  { en: "Our emotions are thought to exist / because they have contributed to our survival as a species.", 
+    ko: "우리의 감정은 존재한다고 여겨진다 / 종으로서 우리의 생존에 기여해 왔기 때문에." },
 
-  { en: "I went diving / in the cold sea off the coast of the Cape, / and it was among the dense seaweed forests / where I met an octopus.", 
-    ko: "나는 다이빙하러 갔다 / 희망봉 앞바다의 차가운 바다에서 / 그리고 울창한 해초 숲 사이였다 / 내가 문어를 만났던 곳은." },
+  { en: "Fear has helped us avoid dangers, / expressing anger helps us scare off threats, / and expressing positive emotions helps us bond with others.", 
+    ko: "두려움은 우리가 위험을 피하도록 도와왔고 / 분노를 표현하는 것은 위협을 물리치도록 도와주며 / 긍정적인 감정을 표현하는 것은 타인과 유대감을 형성하도록 도와준다." },
 
-  { en: "First Encounter", 
-    ko: "첫 만남" },
+  { en: "From an evolutionary perspective, / an emotion is a kind of “program” / that, when triggered, / directs many of our activities.", 
+    ko: "진화론적 관점에서 / 감정은 일종의 ‘프로그램’이며 / 그것이 촉발되면 / 우리의 많은 활동을 이끈다." },
 
-  { en: "I saw a fish peacefully swimming / near a heap of shells.", 
-    ko: "나는 평화롭게 헤엄치는 물고기를 봤다 / 조개더미 근처에서." },
+  { en: "These activities include attention, perception, memory, movement, and expressions.", 
+    ko: "이러한 활동에는 주의, 지각, 기억, 움직임, 표현 등이 포함된다." },
 
-  { en: "Suddenly, / an octopus sprang from the heap / and grabbed the fish.", 
-    ko: "갑자기 / 문어 한 마리가 조개더미에서 튀어나왔다 / 그리고 물고기를 잡았다." },
+  { en: "For example, / fear makes us very attentive / and narrows our perceptual focus to threatening stimuli.", 
+    ko: "예를 들어 / 두려움은 우리를 매우 주의 깊게 만들고 / 위협적인 자극에 지각의 초점을 좁히게 한다." },
 
-  { en: "Amazed at the cleverness of the octopus, / I swam a little closer, / but it disappeared.", 
-    ko: "문어의 영리함에 놀란 나는 / 조금 더 가까이 헤엄쳤다 / 하지만 그것은 사라졌다." },
+  { en: "Fear will cause us either to face a situation / or avoid it.", 
+    ko: "두려움은 우리로 하여금 상황에 맞서게 하거나 / 혹은 그것을 피하게 만든다." },
 
-  { en: "In fact, / it had lifted a piece of seaweed, / wrapped it around itself, / and was staring at me out of a little gap.", 
-    ko: "사실 / 그것은 해초 한 조각을 들어 올렸다 / 몸에 감았다 / 그리고 작은 틈새로 나를 쳐다보고 있었다." },
+  { en: "It may also cause us to remember an experience more acutely / so that we avoid the threat in the future.", 
+    ko: "또한 그것은 우리가 경험을 더 선명하게 기억하게 만들어 / 미래에 그 위협을 피하도록 할 수 있다." },
 
-  { en: "What an extraordinary creature!", 
-    ko: "정말 비범한 생명체였다!" },
+  { en: "Regardless of the specific ways in which they activate our systems, / the specific emotions we possess are thought to exist / because they have helped us survive challenges within our environment long ago.", 
+    ko: "그것들이 우리의 체계를 활성화하는 구체적인 방식과 관계없이 / 우리가 가진 특정 감정들은 존재한다고 여겨진다 / 오래전 환경 속의 어려움에서 살아남도록 도와왔기 때문에." },
 
-  { en: "I wondered / what would happen if I kept watching it.", 
-    ko: "나는 궁금했다 / 내가 그것을 계속 지켜보면 무슨 일이 일어날까." },
-
-  { en: "To see the world from the octopus’s perspective, / I left a camera near the den / and started visiting regularly.", 
-    ko: "문어의 시선으로 세상을 보기 위해 / 나는 굴 근처에 카메라를 두었다 / 그리고 정기적으로 방문하기 시작했다." },
-
-  { en: "I even mapped the environment / around the den.", 
-    ko: "나는 환경도 지도를 만들었다 / 굴 주변의." },
-
-  { en: "Expecting some drama to come, / I waited.", 
-    ko: "어떤 드라마가 펼쳐질까 기대하며 / 나는 기다렸다." },
-
-  { en: "Making Friends", 
-    ko: "친구 만들기" },
-
-  { en: "The octopus became less scared / as I visited more often.", 
-    ko: "문어는 겁을 덜 먹기 시작했다 / 내가 더 자주 방문하자." },
-
-  { en: "After about a month, / it came near me.", 
-    ko: "약 한 달 후 / 그것은 내 곁으로 다가왔다." }
+  { en: "If they had not helped us adapt and survive, / they would not have evolved with us.", 
+    ko: "만약 그것들이 우리가 적응하고 살아남는 데 도움을 주지 않았다면 / 그것들은 우리와 함께 진화하지 않았을 것이다." }
+];
 ];
 let currentIndex = 0;
 
