@@ -199,32 +199,99 @@ let elapsedTime = 0;
 
 // 나중에 구글 시트 연동 시 이 부분을 교체할 수 있습니다.
 const sentences = [
-  { en: "Our emotions are thought to exist / because they have contributed to our survival as a species.", 
-    ko: "우리의 감정은 존재한다고 여겨진다 / 종으로서 우리의 생존에 기여해 왔기 때문에." },
+ const sentences = [
+  { en: "I returned to the Cape of Good Hope, South Africa, / where I had spent my childhood, / after over 20 years of movie-making.", 
+    ko: "나는 남아프리카공화국의 희망봉으로 돌아갔다 / 그곳은 내가 어린 시절을 보냈던 곳이다 / 20년이 넘는 영화 제작 생활 후에." },
 
-  { en: "Fear has helped us avoid dangers, / expressing anger helps us scare off threats, / and expressing positive emotions helps us bond with others.", 
-    ko: "두려움은 우리가 위험을 피하도록 도와왔고 / 분노를 표현하는 것은 위협을 물리치도록 도와주며 / 긍정적인 감정을 표현하는 것은 타인과 유대감을 형성하도록 도와준다." },
+  { en: "I went diving / in the cold sea off the coast of the Cape, / and it was among the dense seaweed forests / where I met an octopus.", 
+    ko: "나는 다이빙하러 갔다 / 희망봉 해안 앞의 차가운 바다에서 / 그리고 울창한 해초 숲 사이에서 / 나는 문어를 만났다." },
 
-  { en: "From an evolutionary perspective, / an emotion is a kind of 'program' / that, when triggered, / directs many of our activities.", 
-    ko: "진화론적 관점에서 / 감정은 일종의 '프로그램'이며 / 그것이 촉발되면 / 우리의 많은 활동을 이끈다." },
+  { en: "First Encounter", 
+    ko: "첫 만남" },
 
-  { en: "These activities include attention, perception, memory, movement, and expressions.", 
-    ko: "이러한 활동에는 주의, 지각, 기억, 움직임, 표현 등이 포함된다." },
+  { en: "I saw a fish peacefully swimming / near a heap of shells.", 
+    ko: "나는 평화롭게 헤엄치는 물고기를 보았다 / 조개더미 근처에서." },
 
-  { en: "For example, / fear makes us very attentive / and narrows our perceptual focus to threatening stimuli.", 
-    ko: "예를 들어 / 두려움은 우리를 매우 주의 깊게 만들고 / 위협적인 자극에 지각의 초점을 좁히게 한다." },
+  { en: "Suddenly, / an octopus sprang from the heap / and grabbed the fish.", 
+    ko: "갑자기 / 문어 한 마리가 조개더미에서 튀어나와 / 그 물고기를 붙잡았다." },
 
-  { en: "Fear will cause us either to face a situation / or avoid it.", 
-    ko: "두려움은 우리로 하여금 상황에 맞서게 하거나 / 혹은 그것을 피하게 만든다." },
+  { en: "Amazed at the cleverness of the octopus, / I swam a little closer, / but it disappeared.", 
+    ko: "문어의 영리함에 놀라 / 나는 조금 더 가까이 헤엄쳤지만 / 그것은 사라졌다." },
 
-  { en: "It may also cause us to remember an experience more acutely / so that we avoid the threat in the future.", 
-    ko: "또한 그것은 우리가 경험을 더 선명하게 기억하게 만들어 / 미래에 그 위협을 피하도록 할 수 있다." },
+  { en: "In fact, / it had lifted a piece of seaweed, / wrapped it around itself, / and was staring at me out of a little gap.", 
+    ko: "사실 / 그것은 해초 한 조각을 들어 올려 / 자신의 몸에 감싸고 / 작은 틈 사이로 나를 바라보고 있었다." },
 
-  { en: "Regardless of the specific ways in which they activate our systems, / the specific emotions we possess are thought to exist / because they have helped us survive challenges within our environment long ago.", 
-    ko: "그것들이 우리의 체계를 활성화하는 구체적인 방식과 관계없이 / 우리가 가진 특정 감정들은 존재한다고 여겨진다 / 오래전 환경 속의 어려움에서 살아남도록 도와왔기 때문에." },
+  { en: "What an extraordinary creature!", 
+    ko: "정말 놀라운 생명체였다!" },
 
-  { en: "If they had not helped us adapt and survive, / they would not have evolved with us.", 
-    ko: "만약 그것들이 우리가 적응하고 살아남는 데 도움을 주지 않았다면 / 그것들은 우리와 함께 진화하지 않았을 것이다." }
+  { en: "I wondered / what would happen if I kept watching it.", 
+    ko: "나는 궁금했다 / 내가 계속 그것을 지켜본다면 무슨 일이 일어날지." },
+
+  { en: "To see the world from the octopus's perspective, / I left a camera near the den / and started visiting regularly.", 
+    ko: "문어의 관점에서 세상을 보기 위해 / 나는 굴 근처에 카메라를 두고 / 정기적으로 방문하기 시작했다." },
+
+  { en: "I even mapped the environment / around the den.", 
+    ko: "나는 심지어 환경까지 지도에 표시했다 / 굴 주변의." },
+
+  { en: "Expecting some drama to come, / I waited.", 
+    ko: "어떤 극적인 일이 일어나기를 기대하며 / 나는 기다렸다." },
+
+  { en: "Making Friends", 
+    ko: "친구 만들기" },
+
+  { en: "The octopus became less scared / as I visited more often.", 
+    ko: "문어는 덜 무서워하게 되었다 / 내가 더 자주 방문하자." },
+
+  { en: "After about a month, / it came near me.", 
+    ko: "약 한 달 후 / 그것은 내 가까이 다가왔다." },
+
+  { en: "I put my hand out, / and it reached out to me.", 
+    ko: "내가 손을 내밀자 / 그것도 나에게 팔을 뻗었다." },
+
+  { en: "After another week, / it started to wave / like a human friend / saying, 'Hi, I'm excited to see you.'", 
+    ko: "또 일주일 후 / 그것은 손을 흔들기 시작했다 / 인간 친구처럼 / '안녕, 너를 만나서 반가워.'라고 말하면서." },
+
+  { en: "I kept still, / and it covered my whole hand.", 
+    ko: "나는 가만히 있었고 / 그것은 내 손 전체를 덮었다." },
+
+  { en: "Since I had to take a breath, / I swam toward the surface.", 
+    ko: "나는 숨을 쉬어야 했기 때문에 / 수면 쪽으로 헤엄쳤다." },
+
+  { en: "To my surprise, / it rode on my hand / all the way to the top.", 
+    ko: "놀랍게도 / 그것은 내 손 위에 올라탄 채 / 끝까지 함께 올라왔다." },
+
+  { en: "There I was, / just staring into the eyes of this incredible creature.", 
+    ko: "나는 그곳에서 / 이 놀라운 생명체의 눈을 바라보고 있었다." },
+
+  { en: "It sparked my curiosity / in a way that I had not experienced before.", 
+    ko: "그것은 내 호기심을 자극했다 / 내가 전에 경험하지 못한 방식으로." },
+
+  { en: "Had I gained its trust?", 
+    ko: "내가 그것의 신뢰를 얻은 걸까?" },
+
+  { en: "I started reading books about octopuses, / but I wanted to learn more about this marvelous creature.", 
+    ko: "나는 문어에 관한 책을 읽기 시작했지만 / 이 놀라운 생명체에 대해 더 알고 싶었다." },
+
+  { en: "The first thing I learned / was that 'it' was a 'she.'", 
+    ko: "내가 가장 먼저 알게 된 것은 / '그것'이 암컷이라는 사실이었다." },
+
+  { en: "Getting Closer", 
+    ko: "더 가까워지기" },
+
+  { en: "Danger in the form of pyjama sharks, the area's biggest predators, / came with little warning in the sea.", 
+    ko: "이 지역 최대의 포식자인 파자마 상어라는 형태의 위험은 / 바다에서 거의 예고 없이 찾아왔다." },
+
+  { en: "The octopus was moving around near the edge of the seaweed forest, / and I saw a shark tracking her.", 
+    ko: "문어는 해초 숲 가장자리 근처를 움직이고 있었고 / 나는 상어가 그녀를 추적하는 것을 보았다." },
+
+  { en: "In an instant, / she swam into a crack to escape, / but the shark was faster.", 
+    ko: "순식간에 / 그녀는 도망치기 위해 틈으로 헤엄쳐 들어갔지만 / 상어가 더 빨랐다." },
+
+  { en: "The shark had taken a bite of one of her arms / and was waiting for her.", 
+    ko: "상어는 그녀의 팔 하나를 물어뜯고 / 그녀를 기다리고 있었다." },
+
+  { en: "I wanted to save my friend, / but in this environment, / I could only observe.", 
+    ko: "나는 내 친구를 구하고 싶었지만 / 이런 환경에서는 / 그저 지켜볼 수밖에 없었다." }
 ];
 let currentIndex = 0;
 
